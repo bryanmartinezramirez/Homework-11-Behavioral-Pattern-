@@ -10,6 +10,7 @@ public class IdleState implements StateOfVendingMachine {
 
     @Override
     public void selectSnack(String name) {
+
         Snack snack = machine.getSnack(name);
 
         if (snack == null) {
