@@ -8,7 +8,9 @@ public class Snack {
 
     public Snack(String name, double price, int quantity) {
         if (name == null || name.isBlank() ||
+            !Double.isFinite(price) ||
             price <= 0 || quantity < 0) {
+
             throw new IllegalArgumentException(
                 "Invalid snack details");
         }
